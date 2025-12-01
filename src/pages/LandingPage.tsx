@@ -12,7 +12,7 @@ import {
   X,
   ArrowUpRight,
 } from "lucide-react";
-import heroBg from "@assets/generated_images/minimalist_abstract_gradient_background_for_saas_landing_page.png";
+import heroBg from "../../public/generated_images/minimalist_abstract_gradient_background_for_saas_landing_page.png";
 
 // Animation variants
 const fadeIn = {
