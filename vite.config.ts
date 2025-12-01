@@ -1,6 +1,6 @@
 // import { defineConfig } from "vite";
 // import react from "@vitejs/plugin-react";
-// 
+//
 // import path from "path";
 // import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
 // import { metaImagesPlugin } from "./vite-plugin-meta-images";
@@ -52,17 +52,23 @@
 // });
 
 import tailwindcss from "@tailwindcss/vite";
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "src"),
+    },
+  },
   optimizeDeps: {
-    exclude: ['lucide-react'],
+    exclude: ["lucide-react"],
   },
   server: {
     open: true,
-    port: 3000
-  }
+    port: 3000,
+  },
 });
